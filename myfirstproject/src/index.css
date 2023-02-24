@@ -283,3 +283,16 @@ button:hover{
   border-bottom: 2px solid white;
 }
 
+
+.tweetsArchived{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+
+}
+
