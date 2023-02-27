@@ -12,6 +12,9 @@ export const RickAndMorty = () => {
   const obtener = () =>{
     const nameInptu = document.getElementById("textEnterUse").value
     newText(nameInptu)
+    if(nameInptu == ""){
+      newText("Ingrese dato valido")
+    }
   }
 
   //Archivar
@@ -34,11 +37,13 @@ export const RickAndMorty = () => {
     let mostrartwetts = ""
 
     archivar.map((i) =>{
+      
       mostrartwetts += "Tweet: " +i 
       newTwett(mostrartwetts)
     })
     
   }
+
 
   return (
     <div className='RickAndMorty'>
@@ -54,10 +59,15 @@ export const RickAndMorty = () => {
             <button className='btnInteract' onClick={mostrar}>Mostrar Archivados</button>
           </div>
           <h3 id='resultTweet'>{text}</h3>
+          
         </div>
       </div>
           <h4>here you will see your archived tweets</h4>
-          <div className="tweetsArchived" >{oneTwett}</div>
+          <div className="tweetsArchived" >
+            <div className="styleCard">
+              <p className="archivedText">{oneTwett}</p>
+            </div>
+          </div>
     </div>
   )
 }
